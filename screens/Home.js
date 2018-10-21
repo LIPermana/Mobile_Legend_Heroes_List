@@ -1,5 +1,6 @@
 import React from 'react';
 import {Container, Content, Text, Thumbnail, Button} from 'native-base';
+import '../components/TryRedux';
 
 export default Home = (props) => (
   <Container style={forstyle.container}>

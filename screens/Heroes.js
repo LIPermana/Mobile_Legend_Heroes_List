@@ -31,7 +31,7 @@ export default class Heroes extends Component {
           <Text>Heroes</Text>
         </Body>
         <Right>
-          <TouchableOpacity onPress={()=>this.props.navigator.push({screen:'HeroView'})}>
+          <TouchableOpacity onPress={()=>this.props.navigator.push({screen:'push.HeroAdd'})}>
             <Icon name="add" style={{color: '#62afef'}}/>
           </TouchableOpacity>
         </Right>
@@ -45,7 +45,7 @@ export default class Heroes extends Component {
         <Content>
           {this.renderHeader()}
           <List>
-            {this.state.heroes.map((hero, key)=> <Hero key={key} hero={hero}/>)}
+            {this.state.heroes.map((hero, key)=> <Hero key={key} hero={hero} {...this.props}/>)}
           </List>
         </Content>
       </Container>
